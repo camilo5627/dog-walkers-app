@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <div id="contenedor">
+            <img id="logo" src="/img/LogoPerros.png" alt="logo" />
+            <nav>
+                <ul id="navPrincipal">
+
+                    <li id="btnSeccionInicio" class="boton invitado cliente paseador">
+                        <a>Inicio</a>
+                    </li>
+                    <li id="btnSeccionRegistro" class="boton invitado ">
+                        <a>Registrarse</a>
+                    </li>
+                    <li id="btnSeccionLogearse" class="boton invitado ">
+                        <a>Logearse</a>
+                    </li>
+                    <li id="btnSeccionListaPaseadores" class="boton cliente">
+                        <a>Lista de paseadores</a>
+                    </li>
+                    <li id="btnSeccionContratarPaseador" class="boton cliente">
+                        <a>Contratar Paseador</a>
+                    </li>
+                    <li id="btnSeccionContratacionPendiente" class="boton cliente">
+                        <a>Contrataciones Pendientes</a>
+                    </li>
+                    <li id="btnSeccionContratacionPendientePaseador" class="boton paseador">
+                        <a>Contrataciones Pendientes</a>
+                    </li>
+                    <li id="btnSeccionPerrosAsignadosPaseador" class="boton paseador">
+                        <a>Perros Asignados</a>
+                    </li>
+                    <li id="btnSeccionCerrarSesion" class="boton cliente paseador">
+                        <a>Cerrar sesión</a>
+                    </li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <section>
+            <!------------------------------------------------------------------- Inicio ------------------------------------------------------------------->
+            <section id="seccionInicio" class="seccion">
+                <h1>Paseadores de perros a tu disposición</h1>
+                <h4>Conectamos paseadores responsables con dueños de perros 🐾</h4>
+            </section>
+
+
+            <!------------------------------------------------------------------- Registro ------------------------------------------------------------------->
+            <section id="seccionRegistro" class="seccion">
+                <h1>Registro</h1>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre"><br><br>
+                <label for="usuario">Nombre de usuario:</label>
+                <input type="text" id="usuario"><br><br>
+                <label for="contraseña">Contraseña:</label>
+                <input type="password" id="contrasenia"><br><br>
+                <label for="nombrePerro">Nombre del perro:</label>
+                <input type="text" id="nombrePerro"><br><br>
+                <label for="tamanio">Tamaño del perro:</label>
+                <select id="tamanio">
+                    <option value="xx">Seleccione...</option>
+                    <option value="Chico">Chico</option>
+                    <option value="Mediano">Mediano</option>
+                    <option value="Grande">Grande</option>
+                </select><br><br>
+                <input type="button" id="Registrarse" value="Registrarse"><br>
+                <p id="Respuesta"></p>
+            </section>
+
+            <!------------------------------------------------------------------- Inicio de Sesión ------------------------------------------------------------------->
+            <section id="seccionLogearse" class="seccion">
+                <h1>Iniciar sesión</h1>
+
+                <label for="usuarioLogin">Usuario:</label><br>
+                <input type="text" id="usuarioLogin" name="usuario" value="">
+
+
+                <label for="contraseniaLogin">Contraseña:</label><br>
+                <input type="password" id="contraseniaLogin" name="contrasenia" value="">
+
+                <input type="submit" value="Ingresar" id="Logeo">
+                <p id="RespuestaLogin"></p>
+
+            </section>
+
+            <!------------------------------------------------------------------- Selección de paseador ------------------------------------------------------------------->
+            <section id="seccionSeleccionDePaseador" class="seccion">
+                <h2>Eliga un paseador</h2>
+                <select id="comboPaseadores">
+                    <option value="slc">Seleccione...</option>
+                </select>
+                <input type="button" value="Contratar Paseador" id="ContratarPaseador">
+
+                <p id="infoContratacionError"></p>
+            </section>
+
+            <!------------------------------------------------------------------- Gestión de contratación pendiente (Cliente) ------------------------------------------------------------------->
+            <section id="seccionGestionContratacion" class="seccion">
+                <h2>Contratación Pendiente</h2>
+                <p id="infoContratacion"></p>
+                <input type="button" value="Cancelar Solicitud" id="btnCancelarContratacion">
+            </section>
+
+            <!------------------------------------------------------------------- Gestión de contratación pendiente (Paseador) ------------------------------------------------------------------->
+
+            <section id="seccionGestionContratacionPaseador" class="seccion">
+                <h2>Contrataciónes Pendientes</h2>
+                <p id="infoContratacionPaseador"></p>
+            </section>
+
+
+
+
+
+
+
+
+            <!------------------------------------------------------------------- Listado de paseadores ------------------------------------------------------------------->
+            <section id="seccionListaPaseadores" class="seccion">
+                <h2>Lista de Paseadores</h2>
+                <ul id="listaPaseadores">
+                </ul>
+            </section>
+
+
+            <!-- Ver perros asignados actualmente -->
+
+            <!------------------------------------------------------------------- Listdo de perros asignados (Paseador) ----------------------------------------------------------------->
+            <section id="seccionVerPerrosAsignados" class="seccion">
+                <h2>Lista de Perros Asignados</h2>
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Nombre del Perro</th>
+                            <th>Tamaño</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tblListaPerrosAsignados">
+
+
+                    </tbody>
+                </table>
+                <h2>Cupo de la Camioneta</h2>
+                <p id="infoPerrosAsignados"></p>
+            </section>
+    </main>
+
+    <footer>
+        <a href="https://www.ort.edu.uy">Footer</a>
+    </footer>
+
+
+    <script src="/js/codigo.js"></script>
+</body>
+
+</html>
