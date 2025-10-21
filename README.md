@@ -1,6 +1,6 @@
 
 
-**Problem Overview**
+**Problem Overview:**
 Develop an application for a startup that connects dog walkers with people who have dogs.
 
 **System User Types:**
